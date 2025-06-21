@@ -15,7 +15,10 @@ on:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
+      - uses: actions/checkout@v4
       - name: Default metrics
         uses: lowlighter/metrics@latest
         with:
